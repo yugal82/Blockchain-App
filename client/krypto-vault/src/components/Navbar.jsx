@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <nav className='w-full flex md: items-center p-4'>
       <div className='md:flex[0.5] flex-initial justify-center items-center'>
-        <h2 className='w-32 text-white font-bold'>KryptoVault</h2>
+        <h2 className='text-white text-2xl font-bold'>KryptoVault</h2>
       </div>
       <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         {["Market","Exchange","Wallets"].map((items, index) => (

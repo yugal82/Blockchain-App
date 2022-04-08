@@ -4,6 +4,8 @@ import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
 import { Loader } from './'
 import { TransactionContext } from '../context/TransactionContext'
+import { shortenAddress } from '../utils/shortenAddress'
+
 
 const commonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[100px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-medium text-white';
 
@@ -54,7 +56,7 @@ function Welcome() {
                 <BsInfoCircle fontSize={20} color='#fff' />
               </div>
               <div>
-                <p className='text-white font-light text-sm'>Address</p>
+                <p className='text-white font-light text-sm'>{shortenAddress(connectedAccounts)}</p>
                 <p className='text-white font-medium text-lg'>Ethereum</p>
               </div>
             </div>

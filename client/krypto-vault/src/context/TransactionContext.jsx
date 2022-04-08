@@ -35,7 +35,7 @@ export const TransactionProvider = ({ children }) => {
             if (accounts.length) {
                 setConnectedAccounts(accounts[0]);
             } else {
-                console.log("No accounts connected!");
+                alert("No accounts connected!");
             }
         } catch (error) {
             console.log(error);
