@@ -19,7 +19,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
     className='my-2 w-full rounded-sm p-2 outline-none bg-transparent border-b border-white text-sm text-white' />
 )
 function Welcome() {
-  const { connectWallet, connectedAccounts , formData, sendTransaction, handleSubmitButton} = useContext(TransactionContext);
+  const { connectWallet, connectedAccounts , formData, sendTransaction, handleSubmitButton, isLoading} = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
     const {addressTo, amount,keyword,message} = formData;
@@ -68,7 +68,7 @@ function Welcome() {
             <Input placeholder='Keyword' name='keyword' type='text' handleChange={handleSubmitButton} />
             <Input placeholder='Message' name='message' type='text' handleChange={handleSubmitButton} />
 
-            {false ? (
+            {isLoading ? (
               <Loader />
             ) : (
               <button type='button' onClick={handleSubmit} className='flex flex-row justify-center items-center w-full bg-[#2952e3] mt-2 py-4 px-2 rounded-full hover:bg-[#2546bd] cursor-pointer text-white font-base font-bold'>
